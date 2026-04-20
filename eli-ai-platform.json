@@ -1,0 +1,161 @@
+{
+  "version": "2.0.0",
+  "project": {
+    "id": "elli-ai-001",
+    "name": "Elli AI Platform",
+    "purpose": "AI-powered conversational platform with Mars-themed dark design",
+    "description": "Full-stack AI chat platform using Next.js 15, Firebase Auth, and NVIDIA NIM",
+    "tags": ["ai", "nextjs", "firebase", "nvidia-nim"],
+    "status": "development",
+    "health_score": 78,
+    "created_at": "2026-04-08T14:00:00Z",
+    "last_updated": "2026-04-20T05:00:00Z",
+    "target_launch_date": "2026-05-01T00:00:00Z"
+  },
+  "constitutional_rules": {
+    "primary": "Update constitution before any task execution.",
+    "enforcement": "strict",
+    "version": "2.0.0",
+    "rules": ["Read constitution before every action", "Log cost after every cloud operation"]
+  },
+  "tech_stack": {
+    "frontend": { "framework": "Next.js 15", "styling": "Tailwind CSS 4", "ui_library": "shadcn/ui" },
+    "backend": { "runtime": "Node.js 20", "database": "Firebase Firestore", "auth": "Firebase Auth" },
+    "ai_services": { "provider": "NVIDIA NIM", "model": "Kimi K2 Thinking" },
+    "deployment": { "hosting": "Vercel", "ci_cd": "GitHub Actions" }
+  },
+  "cli_configuration": { "active_profile": "vercel-prod", "require_explicit_selection": true, "profiles": {} },
+  "cost_optimization": {
+    "budget": {
+      "daily_limit": 25,
+      "monthly_limit": 500,
+      "alert_thresholds": [50, 80, 95],
+      "current_spend_today": 4.20,
+      "current_spend_month": 87.50,
+      "projected_monthly": 142.00
+    },
+    "active_resources": [
+      {
+        "id": "vercel-elli-prod",
+        "type": "vercel-deployment",
+        "purpose": "Production hosting",
+        "estimated_cost_hour": 0.00,
+        "tags": { "project": "elli-ai", "owner": "ajmal", "cost-center": "ai-platform" }
+      },
+      {
+        "id": "firebase-elli",
+        "type": "firebase-project",
+        "purpose": "Auth + Firestore + Storage",
+        "estimated_cost_hour": 0.01,
+        "tags": { "project": "elli-ai", "owner": "ajmal", "cost-center": "ai-platform" }
+      }
+    ],
+    "zombie_detection": {
+      "enabled": true,
+      "last_scan": "2026-04-20T04:00:00Z",
+      "orphaned_resources": []
+    }
+  },
+  "workflows": [
+    {
+      "id": "wf-001",
+      "phase": "Project Setup & Architecture",
+      "order": 1,
+      "status": "completed",
+      "parallel_safe": false,
+      "estimated_duration_hours": 4,
+      "dependencies": [],
+      "tasks": [
+        { "id": "t-001", "title": "Initialize Next.js 15 with TypeScript", "status": "completed", "priority": "critical", "agent": "developer", "estimated_minutes": 30, "actual_minutes": 25, "cost_incurred": 0, "started_at": "2026-04-08T14:30:00Z", "completed_at": "2026-04-08T14:55:00Z",
+          "todo_items": [
+            { "id": "td-01", "text": "Run create-next-app with TS template", "completed": true },
+            { "id": "td-02", "text": "Configure strict TypeScript", "completed": true },
+            { "id": "td-03", "text": "Install shadcn/ui + Tailwind v4", "completed": true }
+          ]
+        },
+        { "id": "t-002", "title": "Configure Firebase Auth + Firestore", "status": "completed", "priority": "critical", "agent": "cloud_resource", "estimated_minutes": 45, "actual_minutes": 60, "cost_incurred": 0, "started_at": "2026-04-08T15:00:00Z", "completed_at": "2026-04-08T16:00:00Z" },
+        { "id": "t-003", "title": "System architecture design (ADR)", "status": "completed", "priority": "high", "agent": "architect", "estimated_minutes": 60, "actual_minutes": 45, "cost_incurred": 0, "started_at": "2026-04-08T16:00:00Z", "completed_at": "2026-04-08T16:45:00Z" }
+      ]
+    },
+    {
+      "id": "wf-002",
+      "phase": "Core UI Development",
+      "order": 2,
+      "status": "completed",
+      "parallel_safe": true,
+      "estimated_duration_hours": 12,
+      "dependencies": ["wf-001"],
+      "tasks": [
+        { "id": "t-004", "title": "Mars-themed design system (dark mode)", "status": "completed", "priority": "high", "agent": "ui_ux", "estimated_minutes": 180, "actual_minutes": 210, "cost_incurred": 0, "started_at": "2026-04-09T09:00:00Z", "completed_at": "2026-04-09T12:30:00Z" },
+        { "id": "t-005", "title": "Chat interface with streaming responses", "status": "completed", "priority": "critical", "agent": "developer", "estimated_minutes": 240, "actual_minutes": 280, "cost_incurred": 1.50, "started_at": "2026-04-10T09:00:00Z", "completed_at": "2026-04-10T13:40:00Z" },
+        { "id": "t-006", "title": "Auth pages (login, signup, forgot password)", "status": "completed", "priority": "high", "agent": "developer", "estimated_minutes": 120, "actual_minutes": 100, "cost_incurred": 0, "started_at": "2026-04-11T09:00:00Z", "completed_at": "2026-04-11T10:40:00Z" }
+      ]
+    },
+    {
+      "id": "wf-003",
+      "phase": "AI Integration",
+      "order": 3,
+      "status": "in_progress",
+      "parallel_safe": false,
+      "estimated_duration_hours": 8,
+      "dependencies": ["wf-002"],
+      "tasks": [
+        { "id": "t-007", "title": "Integrate NVIDIA NIM API with Kimi K2", "status": "completed", "priority": "critical", "agent": "developer", "estimated_minutes": 180, "actual_minutes": 200, "cost_incurred": 8.40, "started_at": "2026-04-15T09:00:00Z", "completed_at": "2026-04-15T12:20:00Z" },
+        { "id": "t-008", "title": "Conversation memory + context window", "status": "in_progress", "priority": "high", "agent": "developer", "estimated_minutes": 120, "cost_incurred": 2.10, "started_at": "2026-04-19T10:00:00Z", "completed_at": null,
+          "todo_items": [
+            { "id": "td-10", "text": "Sliding window context (last 20 messages)", "completed": true },
+            { "id": "td-11", "text": "Conversation summarization for long chats", "completed": false },
+            { "id": "td-12", "text": "Test with 50+ message conversations", "completed": false }
+          ]
+        },
+        { "id": "t-009", "title": "GPT-4o fallback on NIM timeout", "status": "pending", "priority": "medium", "agent": "developer", "estimated_minutes": 60, "cost_incurred": 0, "started_at": null, "completed_at": null }
+      ]
+    },
+    {
+      "id": "wf-004",
+      "phase": "Testing & QA",
+      "order": 4,
+      "status": "pending",
+      "parallel_safe": true,
+      "estimated_duration_hours": 6,
+      "dependencies": ["wf-003"],
+      "tasks": [
+        { "id": "t-010", "title": "E2E tests for auth flows", "status": "pending", "priority": "high", "agent": "qa", "estimated_minutes": 120 },
+        { "id": "t-011", "title": "Visual regression tests (mobile + desktop)", "status": "pending", "priority": "medium", "agent": "qa", "estimated_minutes": 90 },
+        { "id": "t-012", "title": "Lighthouse audit (Performance > 90)", "status": "pending", "priority": "medium", "agent": "qa", "estimated_minutes": 45 }
+      ]
+    },
+    {
+      "id": "wf-005",
+      "phase": "Production Deployment",
+      "order": 5,
+      "status": "pending",
+      "parallel_safe": false,
+      "estimated_duration_hours": 3,
+      "dependencies": ["wf-004"],
+      "tasks": [
+        { "id": "t-013", "title": "Configure production env vars on Vercel", "status": "pending", "priority": "critical", "agent": "cloud_resource", "estimated_minutes": 30 },
+        { "id": "t-014", "title": "Custom domain + SSL setup", "status": "pending", "priority": "high", "agent": "cloud_resource", "estimated_minutes": 20 },
+        { "id": "t-015", "title": "Final deploy + smoke tests", "status": "pending", "priority": "critical", "agent": "qa", "estimated_minutes": 45 }
+      ]
+    }
+  ],
+  "agents": {
+    "supervisor": { "role": "Constitution Guardian + Task Router", "status": "idle", "current_task": null },
+    "research": { "role": "High-context research + validation", "status": "idle", "current_task": null },
+    "architect": { "role": "System design + API planning", "status": "idle", "current_task": null },
+    "cloud_resource": { "role": "Cost-optimized cloud provisioning", "status": "idle", "current_task": null },
+    "developer": { "role": "Code generation + documentation", "status": "active", "current_task": "t-008" },
+    "ui_ux": { "role": "Design system enforcement", "status": "idle", "current_task": null },
+    "qa": { "role": "Testing + visual regression", "status": "idle", "current_task": null }
+  },
+  "validation": {
+    "pre_execution": ["Constitution validates", "Budget has capacity", "Dependencies met"],
+    "post_execution": ["Task status updated", "Cost logged", "Build passes"]
+  },
+  "design_system": {
+    "breakpoints": { "mobile": "375px", "tablet": "768px", "desktop": "1024px", "wide": "1440px" },
+    "approach": "mobile-first",
+    "performance_budgets": { "FCP": "< 1.5s", "LCP": "< 2.5s", "CLS": "< 0.1" }
+  }
+}
