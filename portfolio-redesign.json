@@ -1,0 +1,100 @@
+{
+  "version": "2.0.0",
+  "project": {
+    "id": "portfolio-002",
+    "name": "Portfolio Redesign",
+    "purpose": "Modern developer portfolio with glassmorphism design",
+    "description": "Personal portfolio showcasing projects, skills, and experience",
+    "tags": ["portfolio", "nextjs", "vercel"],
+    "status": "planning",
+    "health_score": 100,
+    "created_at": "2026-04-20T08:00:00Z",
+    "last_updated": "2026-04-20T08:30:00Z",
+    "target_launch_date": "2026-05-15T00:00:00Z"
+  },
+  "constitutional_rules": {
+    "primary": "Update constitution before any task execution.",
+    "enforcement": "strict",
+    "version": "2.0.0",
+    "rules": ["Read constitution before every action"]
+  },
+  "tech_stack": {
+    "frontend": { "framework": "Next.js 15", "styling": "Tailwind CSS 4", "animation": "Framer Motion" },
+    "deployment": { "hosting": "Vercel", "ci_cd": "GitHub Actions" }
+  },
+  "cli_configuration": { "active_profile": null, "require_explicit_selection": true, "profiles": {} },
+  "cost_optimization": {
+    "budget": {
+      "daily_limit": 10,
+      "monthly_limit": 100,
+      "alert_thresholds": [50, 80, 95],
+      "current_spend_today": 0,
+      "current_spend_month": 0,
+      "projected_monthly": 0
+    },
+    "active_resources": [],
+    "zombie_detection": { "enabled": true, "last_scan": null, "orphaned_resources": [] }
+  },
+  "workflows": [
+    {
+      "id": "wf-p-001",
+      "phase": "Design & Planning",
+      "order": 1,
+      "status": "in_progress",
+      "parallel_safe": true,
+      "estimated_duration_hours": 6,
+      "dependencies": [],
+      "tasks": [
+        { "id": "tp-001", "title": "Gather design inspiration and references", "status": "completed", "priority": "high", "agent": "research", "estimated_minutes": 60, "actual_minutes": 45, "cost_incurred": 0, "started_at": "2026-04-20T08:00:00Z", "completed_at": "2026-04-20T08:45:00Z" },
+        { "id": "tp-002", "title": "Define color palette and typography", "status": "in_progress", "priority": "high", "agent": "ui_ux", "estimated_minutes": 45, "cost_incurred": 0, "started_at": "2026-04-20T09:00:00Z", "completed_at": null },
+        { "id": "tp-003", "title": "Wireframe all pages (home, projects, about, contact)", "status": "pending", "priority": "medium", "agent": "ui_ux", "estimated_minutes": 90 }
+      ]
+    },
+    {
+      "id": "wf-p-002",
+      "phase": "Core Development",
+      "order": 2,
+      "status": "pending",
+      "parallel_safe": true,
+      "estimated_duration_hours": 16,
+      "dependencies": ["wf-p-001"],
+      "tasks": [
+        { "id": "tp-004", "title": "Glassmorphism navbar + responsive layout", "status": "pending", "priority": "high", "agent": "developer", "estimated_minutes": 120 },
+        { "id": "tp-005", "title": "Hero section with animated gradient", "status": "pending", "priority": "high", "agent": "developer", "estimated_minutes": 90 },
+        { "id": "tp-006", "title": "Project showcase grid with hover animations", "status": "pending", "priority": "high", "agent": "developer", "estimated_minutes": 120 },
+        { "id": "tp-007", "title": "Contact form with email integration", "status": "pending", "priority": "medium", "agent": "developer", "estimated_minutes": 60 }
+      ]
+    },
+    {
+      "id": "wf-p-003",
+      "phase": "Polish & Deploy",
+      "order": 3,
+      "status": "pending",
+      "parallel_safe": false,
+      "estimated_duration_hours": 4,
+      "dependencies": ["wf-p-002"],
+      "tasks": [
+        { "id": "tp-008", "title": "SEO optimization + meta tags", "status": "pending", "priority": "medium", "agent": "developer", "estimated_minutes": 30 },
+        { "id": "tp-009", "title": "Lighthouse audit + performance fixes", "status": "pending", "priority": "high", "agent": "qa", "estimated_minutes": 60 },
+        { "id": "tp-010", "title": "Deploy to Vercel with custom domain", "status": "pending", "priority": "critical", "agent": "cloud_resource", "estimated_minutes": 20 }
+      ]
+    }
+  ],
+  "agents": {
+    "supervisor": { "role": "Constitution Guardian", "status": "idle", "current_task": null },
+    "research": { "role": "Research + validation", "status": "idle", "current_task": null },
+    "architect": { "role": "System design", "status": "idle", "current_task": null },
+    "cloud_resource": { "role": "Cloud provisioning", "status": "idle", "current_task": null },
+    "developer": { "role": "Code generation", "status": "idle", "current_task": null },
+    "ui_ux": { "role": "Design system", "status": "active", "current_task": "tp-002" },
+    "qa": { "role": "Testing", "status": "idle", "current_task": null }
+  },
+  "validation": {
+    "pre_execution": ["Constitution validates", "Budget check"],
+    "post_execution": ["Build passes", "Committed to GitHub"]
+  },
+  "design_system": {
+    "breakpoints": { "mobile": "375px", "tablet": "768px", "desktop": "1024px" },
+    "approach": "mobile-first"
+  }
+}
